@@ -11,7 +11,7 @@ class Movie
     @release_date = release_date
     @director = director
     @summary = summary
-    @url = (title.downcase.sub(" ", "_")) + ".html"
+    @url = (title.downcase.gsub(" ", "_")) + ".html"
 
     SELF_NUMBER.push(self)
   end

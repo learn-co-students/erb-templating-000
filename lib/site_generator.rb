@@ -20,16 +20,20 @@ class SiteGenerator
   end
 
   def generate_pages!
+    @fullHash = Movie::SELF_NUMBER
     Movie::SELF_NUMBER.each do |movie|
       @title = movie.title
       @release_date = movie.release_date
       @director = movie.director
       @summary = movie.summary
+      @fullHash
       File.open('_site/movies/' + movie.url, 'w+') do |filey|
         template = File.open('lib/templates/movie.html.erb', 'r') do |filey2|
           template2 = File.read(filey2)
           template3 = ERB.new template2 
           filey.write(template3.result(binding))
+          filey.close
+          filey2.close
         end
       end
     end
