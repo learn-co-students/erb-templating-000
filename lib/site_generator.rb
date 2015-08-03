@@ -23,9 +23,9 @@ class SiteGenerator
   template = ERB.new(File.open('lib/templates/movie.html.erb').read)
   movies = Movie.all
     movies.each do |movie|
-    File.open("_site/movies/#{movie.url}", "w+") do |f|
-      f << template.result(binding)
-      f.close
+      File.open("_site/movies/#{movie.url}", "w+") do |f|
+        f << template.result(binding)
+        f.close
       end
     end
   end
