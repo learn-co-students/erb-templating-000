@@ -11,8 +11,8 @@ class SiteGenerator
 	end
 
 	def generate_pages!
+		template = ERB.new File.read("lib/templates/movie.html.erb")
 		Movie.all.each do |movie|
-		  template = ERB.new File.read("lib/templates/movie.html.erb")
 		  File.new("_site/movies/#{movie.url}", "w")
 		  File.open("_site/movies/#{movie.url}", 'w') do |f|
 		  	f.write("#{template.result(movie.get_binding)}")
