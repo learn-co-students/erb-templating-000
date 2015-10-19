@@ -11,7 +11,11 @@ class Movie
   end	
   
   def self.make_movies!
-    res = File.read("./spec/fixtures/movie.txt")
+    res = File.read("./spec/fixtures/movies.txt").split("\n")
+    res.each do |e| 
+      attrs = e.split(" - ")
+      mov = Movie.new(attrs[0], attrs[1].to_i, attrs[2], attrs[3])
+    end
   end
   
   def self.recent
@@ -22,14 +26,19 @@ class Movie
   
   def initialize(title, release_date, director, summary)
     @title = title
-	@release_date = release_date
-	@director = director
-	@summary = summary
+	  @release_date = release_date
+	  @director = director
+	  @summary = summary
 	
-	@@all << self unless @@all.include?(self)
+	  @@all << self unless @@all.include?(self)
   end
   
   def url
-    "#{Inflecto.underscore(title.gsub(/\s+/,""))}.html"
+    cap_title = title.split.map { |e| e.capitalize }.join
+    "#{Inflecto.underscore(cap_title)}.html"
   end
+
+  def get_binding
+    binding
+  end  
 end
