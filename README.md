@@ -43,3 +43,4 @@ Once you've passed all of the specs, your site generator should work. Run `bin/g
 * [Ruby Docs](http://www.ruby-doc.org/) - [URI::Escape](http://ruby-doc.org/stdlib-2.1.1/libdoc/uri/rdoc/URI/Escape.html)
 * [Blooberry](http://www.blooberry.com/indexdot/html/index.html) - [URL Encoding](http://www.blooberry.com/indexdot/html/topics/urlencoding.htm)
 * [Perishable Press](https://perishablepress.com/) - [Unsafe Characters](https://perishablepress.com/stop-using-unsafe-characters-in-urls/)
+<a href='https://learn.co/lessons/erb-templating' data-visibility='hidden'>View this lesson on Learn.co</a>
