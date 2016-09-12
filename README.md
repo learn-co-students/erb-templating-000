@@ -38,7 +38,6 @@ template.result(binding)
 Once you've passed all of the specs, your site generator should work. Run `bin/generate` from your command line and then `open _site/index.html` to check it out.
 
 ## Resources
-* [Rasmus Ron Nielsen's Blog](http://www.rrn.dk/) - [Ruby's ERB Templating System: How Does It Work?](http://www.rrn.dk/rubys-erb-templating-system)
 * [Ruby Docs](http://www.ruby-doc.org/) - [Class: ERB](http://www.ruby-doc.org/stdlib-2.1.1/libdoc/erb/rdoc/ERB.html)
 * [Ruby Docs](http://www.ruby-doc.org/) - [URI::Escape](http://ruby-doc.org/stdlib-2.1.1/libdoc/uri/rdoc/URI/Escape.html)
 * [Blooberry](http://www.blooberry.com/indexdot/html/index.html) - [URL Encoding](http://www.blooberry.com/indexdot/html/topics/urlencoding.htm)
