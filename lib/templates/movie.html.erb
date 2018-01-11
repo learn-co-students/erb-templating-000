@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= movie.title %></title> <%# movie.title OR @title will both work %>
+  </head>
+  <body>
+    <h1><%= @title %></h1>
+    <h3>Release Date: <%= @release_date %></h3>
+    <h4><em>Director: <%= @director %></em></h4>
+    <p><%= @summary %></p>
+    <br />
+    <h2>Other Movies</h2>
+    <ul>
+      <% Movie.all.each do |movie| %>
+        <li><a href="<%= movie.url%>"><%= movie.title %></a></li>
+      <% end %>
+    </ul>
+  </body>
+</html>
